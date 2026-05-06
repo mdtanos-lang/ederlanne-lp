@@ -18,7 +18,10 @@
                 <img src="assets/logo.png" alt="Logo Psicológica" class="logo-img">
                 <span class="logo-text">Ederlanne</span>
             </div>
-            <a href="#agendar" class="btn-primary desktop-btn">Agendar Sessão</a>
+            <div class="header-actions">
+                <a href="#cronometro" class="timer-link desktop-btn">Cronômetro mental</a>
+                <a href="#agendar" class="btn-primary desktop-btn">Agendar Sessão</a>
+            </div>
         </div>
     </header>
 
@@ -72,6 +75,41 @@
             </div>
         </section>
 
+        <section class="kung-fu-timer" id="cronometro">
+            <div class="container timer-container">
+                <div class="timer-copy">
+                    <p class="section-kicker">Treino de base</p>
+                    <h2>Cronômetro mental para postura do cavalo</h2>
+                    <p>Inicie o treino e deixe que cada passagem de tempo entregue uma frase para blindar a mente, sustentar o foco e atravessar o desconforto com presença.</p>
+                </div>
+
+                <div class="timer-card" aria-live="polite">
+                    <div class="timer-stance-badge">Ma Bu • Postura do Cavalo</div>
+                    <blockquote id="timerPhrase">Respire fundo, assente a base e comece quando estiver pronto.</blockquote>
+                    <div class="timer-progress" aria-hidden="true">
+                        <span id="timerProgressBar"></span>
+                    </div>
+                    <p id="timerStatus" class="timer-status">Aguardando início</p>
+
+                    <div class="timer-settings">
+                        <label for="phraseInterval">Trocar frase a cada</label>
+                        <select id="phraseInterval">
+                            <option value="15">15 segundos</option>
+                            <option value="30" selected>30 segundos</option>
+                            <option value="45">45 segundos</option>
+                            <option value="60">1 minuto</option>
+                        </select>
+                    </div>
+
+                    <div class="timer-actions">
+                        <button type="button" id="startTimer" class="btn-timer btn-timer-primary">Iniciar</button>
+                        <button type="button" id="pauseTimer" class="btn-timer" disabled>Pausar</button>
+                        <button type="button" id="resetTimer" class="btn-timer">Recomeçar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="cta-section" id="agendar">
             <div class="container">
                 <div class="cta-box">
@@ -99,5 +137,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>

@@ -337,3 +337,188 @@ footer {
         display: none;
     }
 }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timer-link {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.timer-link:hover {
+    color: var(--accent-gold);
+}
+
+/* Kung Fu Timer */
+.kung-fu-timer {
+    padding: 6rem 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(207, 170, 99, 0.18), transparent 30%),
+        linear-gradient(135deg, var(--text-heading), var(--primary-dark));
+    color: #fff;
+}
+
+.timer-container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.timer-copy h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.timer-copy p {
+    color: #dbe4df;
+    font-size: 1.05rem;
+}
+
+.section-kicker {
+    color: var(--accent-gold) !important;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.timer-card {
+    background: rgba(253, 251, 247, 0.96);
+    border: 1px solid rgba(207, 170, 99, 0.35);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+    color: var(--text-heading);
+    padding: 2.5rem;
+}
+
+.timer-stance-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(207, 170, 99, 0.18);
+    border: 1px solid rgba(207, 170, 99, 0.4);
+    border-radius: var(--radius-lg);
+    color: var(--primary-dark);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+    padding: 0.45rem 0.85rem;
+    text-transform: uppercase;
+}
+
+.timer-card blockquote {
+    color: var(--primary-dark);
+    font-family: 'Lora', serif;
+    font-size: clamp(1.55rem, 3vw, 2.45rem);
+    font-weight: 600;
+    line-height: 1.28;
+    min-height: 9rem;
+}
+
+.timer-progress {
+    background: rgba(143, 158, 139, 0.22);
+    border-radius: var(--radius-lg);
+    height: 0.65rem;
+    margin: 2rem 0 0.8rem;
+    overflow: hidden;
+}
+
+.timer-progress span {
+    background: linear-gradient(90deg, var(--accent-gold), var(--primary-light));
+    border-radius: inherit;
+    display: block;
+    height: 100%;
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+.timer-status {
+    color: var(--primary-light);
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.timer-settings {
+    display: grid;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.timer-settings label {
+    color: var(--text-body);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.timer-settings select {
+    appearance: none;
+    background: #fff;
+    border: 1px solid rgba(143, 158, 139, 0.4);
+    border-radius: var(--radius-sm);
+    color: var(--text-heading);
+    font: inherit;
+    font-weight: 700;
+    padding: 0.9rem 1rem;
+}
+
+.timer-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.btn-timer {
+    background: #fff;
+    border: 1px solid rgba(47, 79, 79, 0.2);
+    border-radius: var(--radius-sm);
+    color: var(--primary-dark);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 800;
+    padding: 0.95rem 1rem;
+    transition: all 0.25s ease;
+}
+
+.btn-timer:hover:not(:disabled) {
+    border-color: var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+.btn-timer:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.btn-timer-primary {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: #fff;
+}
+
+@media(max-width: 768px) {
+    .timer-container,
+    .timer-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .timer-copy h2 {
+        font-size: 2rem;
+    }
+
+    .timer-card {
+        padding: 2rem;
+    }
+
+    .timer-card blockquote {
+        min-height: 10rem;
+    }
+}
